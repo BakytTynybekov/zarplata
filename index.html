@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./main.css">
+   </head>
+
+<body>
+  <div class="container">
+    <div class="title">Зарплата</div>
+    <div class="content">
+      <form >
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" >
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Ваша позиция?</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Старший стол</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Поддержка</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Стажер</span>
+            </label>
+          </div>
+        </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" required>Количество смен</span>
+            <input class="smena" type="number" placeholder="Количество смен" >
+          </div>
+          <div class="input-box">
+            <span class="details">Количество завалов</span>
+            <input class="zaval" type="number" placeholder="Количество завалов" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Тест</span>
+            <input class="test" type="number" placeholder="Тест" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Штрафы</span>
+            <input class="penalty" type="number" placeholder="Штрафы" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Аванс</span>
+            <input class="avans" type="number" placeholder="Аванс" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Благодарость</span>
+            <input class="blago" type="number" placeholder="Благодарость" required>
+          </div>
+        </div>
+        
+        <div class="button">
+          <a href="#">
+          <input type="submit" value="Посчитать">
+        </a>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="con-zarplata">
+      <p class="zarplata">
+        Вы получите:
+      </p>
+    </div>
+  </div>
+
+
+<script src="./main.js"></script>
+
+</body>
+
+</html>
