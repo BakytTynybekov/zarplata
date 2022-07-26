@@ -21,7 +21,7 @@ function a() {
   console.log(selected);
 
   if (selected === "dot-1") {
-    day = 4870;
+    day = 4850;
   } else if (selected === "dot-3") {
     day = 3500;
   } else if (selected === "dot-2") {
@@ -46,11 +46,20 @@ function a() {
     testValue = 0;
   }
 
-  if (penalty.value > 1500 || selected === "dot-1") {
+  if (penalty.value > 2250 || selected === "dot-1") {
     prim = 0;
-  } else if (den.value + noch.value > 12 && penalty.value <= 1500) {
+  } else if (den.value + noch.value < 13) {
+    prim = 0;
+  } else if (penalty.value > 1125 && penalty.value <= 2250) {
     prim = 4500;
+  } else if (penalty.value > 375 && penalty.value <= 1125) {
+    prim = 6000;
+  } else if (penalty.value <= 375) {
+    prim = 8250;
   }
+  // else if (den.value + noch.value > 12 && penalty.value <= 1500) {
+  //   prim = 4500;
+  // }
 
   zarplata.innerHTML = `Вы получите ${
     den.value * day +
