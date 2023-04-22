@@ -8,6 +8,7 @@ const avans = document.querySelector(".avans");
 const blago = document.querySelector(".blago");
 const button = document.querySelector(".button");
 const zarplata = document.querySelector(".zarplata");
+const details = document.querySelector(".detailsZar");
 
 button.addEventListener("click", a);
 let testValue = 0;
@@ -15,6 +16,7 @@ let prim = 0;
 let position;
 let day;
 let night;
+let kolZaval;
 
 function a() {
   const selected = document.querySelector('input[name="gender"]:checked').id;
@@ -23,7 +25,7 @@ function a() {
   if (selected === "dot-1") {
     day = 4850;
   } else if (selected === "dot-3") {
-    day = 3500;
+    day = 4300;
   } else if (selected === "dot-2") {
     day = 4300;
   }
@@ -31,7 +33,7 @@ function a() {
   if (selected === "dot-1") {
     night = 5100;
   } else if (selected === "dot-3") {
-    night = 3650;
+    night = 4450;
   } else if (selected === "dot-2") {
     night = 4450;
   }
@@ -46,20 +48,37 @@ function a() {
     testValue = 0;
   }
 
-  if (penalty.value > 2250 || selected === "dot-1") {
-    prim = 0;
-  } else if (den.value + noch.value < 13) {
-    prim = 0;
-  } else if (penalty.value > 1125 && penalty.value <= 2250) {
-    prim = 4500;
-  } else if (penalty.value > 375 && penalty.value <= 1125) {
-    prim = 6000;
-  } else if (penalty.value <= 375) {
-    prim = 8250;
+  if (selected === "dot-3") {
+    if (penalty.value < 1125) {
+      prim = 8250;
+    } else if (penalty.value < 2250) {
+      prim = 6750;
+    } else if (penalty.value > 2250) {
+      prim = 0;
+    }
   }
-  // else if (den.value + noch.value > 12 && penalty.value <= 1500) {
-  //   prim = 4500;
-  // }
+
+  if (selected === "dot-2") {
+    if (penalty.value > 2250) {
+      prim = 0;
+    } else if (den.value + noch.value < 13) {
+      prim = 0;
+    } else if (penalty.value > 1125 && penalty.value <= 2250) {
+      prim = 4500;
+    } else if (penalty.value > 375 && penalty.value <= 1125) {
+      prim = 6000;
+    } else if (penalty.value <= 375) {
+      prim = 8250;
+    }
+  } else if (selected === "dot-1") {
+    prim = 0;
+  }
+
+  if (+zaval.value + +zavalN.value >= 13) {
+    kolZaval = 4500;
+  }
+
+  console.log(prim, testValue, kolZaval);
 
   zarplata.innerHTML = `Вы получите ${
     den.value * day +
@@ -67,9 +86,21 @@ function a() {
     zaval.value * day * 0.25 +
     zavalN.value * night * 0.25 +
     +blago.value +
-    +testValue -
+    +kolZaval +
+    testValue -
     penalty.value +
     prim -
     +avans.value
   } руб.`;
+
+  // details.innerHTML = `
+  // <p>Зарплата без премиальных: ${den.value * day + noch.value * night}</p>
+  // <p>Премия за завалы: ${
+  //   zaval.value * day * 0.25 + zavalN.value * night * 0.25
+  // }</p>
+  // <p>Премия за ошибки: ${prim}</p>
+  // <p>Доп. премия за завалы: ${kolZaval} </p>
+  // <p>Премия за тест: ${testValue} </p>
+  // <p>другие премии: ${blago.value} </p>
+  // `;
 }
