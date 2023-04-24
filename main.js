@@ -16,7 +16,7 @@ let prim = 0;
 let position;
 let day;
 let night;
-let kolZaval;
+let kolZaval = 0;
 
 function a() {
   const selected = document.querySelector('input[name="gender"]:checked').id;
