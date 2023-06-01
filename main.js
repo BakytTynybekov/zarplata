@@ -76,6 +76,8 @@ function a() {
 
   if (+zaval.value + +zavalN.value >= 13) {
     kolZaval = 4500;
+  } else {
+    kolZaval = 0 
   }
 
   console.log(prim, testValue, kolZaval);
