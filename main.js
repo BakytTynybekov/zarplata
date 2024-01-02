@@ -23,15 +23,15 @@ function a() {
   console.log(selected);
 
   if (selected === "dot-1") {
-    day = 4850;
+    day = 5820;
   } else if (selected === "dot-3" || selected === "dot-2") {
-    day = 4300;
+    day = 5160;
   }
 
   if (selected === "dot-1") {
-    night = 5100;
+    night = 6120;
   } else if (selected === "dot-3" || selected === "dot-2") {
-    night = 4600;
+    night = 5520;
   }
 
   if (test.value > 99) {
