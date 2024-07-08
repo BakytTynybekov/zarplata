@@ -23,7 +23,7 @@ function a() {
   console.log(selected);
 
   if (selected === "dot-1") {
-    day = 5820;
+    day = 5844;
   } else if (selected === "dot-3" || selected === "dot-2") {
     day = 5160;
   }
