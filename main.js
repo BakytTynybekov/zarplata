@@ -66,7 +66,7 @@ function a() {
     }
   }
 
-  if (+zaval.value + +zavalN.value >= 13) {
+  if (+zaval.value + +zavalN.value >= 13 && selected === "dot-3" ) {
     kolZaval = 4500;
   } else {
     kolZaval = 0;
