@@ -31,7 +31,7 @@ function a() {
   if (selected === "dot-1") {
     night = 6120;
   } else if (selected === "dot-3" || selected === "dot-2") {
-    night = 5520;
+    night = 6231;
   }
 
   if (test.value > 99) {
