@@ -23,9 +23,9 @@ function a() {
   console.log(selected);
 
   if (selected === "dot-1") {
-    day = 5844;
+    day = 6231;
   } else if (selected === "dot-3" || selected === "dot-2") {
-    day = 5160;
+    day = 5418;
   }
 
   if (selected === "dot-1") {
